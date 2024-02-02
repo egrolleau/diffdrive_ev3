@@ -113,6 +113,9 @@ hardware_interface::return_type DiffDriveEv3::read(const rclcpp::Time & time, co
 
 hardware_interface::return_type DiffDriveEv3::write(const rclcpp::Time & time, const rclcpp::Duration & period)
 {
+  //char txtinfo[50];
+  //snprintf(txtinfo,50,"Write L=%lf G=%lf",l_wheel_.cmd,r_wheel_.cmd);
+  RCLCPP_INFO(logger_, "%s %lf %lf","Write ", l_wheel_.cmd,r_wheel_.cmd);
   ev3->Grun(l_wheel_.cmd);
   ev3->Drun(r_wheel_.cmd);
   

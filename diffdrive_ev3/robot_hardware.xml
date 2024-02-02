@@ -1,0 +1,9 @@
+<library path="diffdrive_ev3">
+  <class name="diffdrive_ev3/DiffDriveEv3"
+         type="DiffDriveEv3"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Hardware Interface for Differential Drive Ev3 controller.
+    </description>
+  </class>
+</library>
